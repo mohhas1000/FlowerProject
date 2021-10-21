@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head><!-- Head-elementet är en behållare för metadata. Metadata har används för att definierar dokumentitel, style, teckenuppsättning samt länkar till bootstrap.-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <title>Flowerz</title>
+</head>
+<body>
+<header>
+    <!-- Företagsnamn & ikon för inloggning -->
+    <h1 id="Header-title" class="p-1 pt-3 text-center">Flowerz</h1> 
+
+    <i id="fa-login-icon" class="fas fa-sign-in-alt float-right fa-2x  mr-2 mt-2 p-1 d-none"></i>
+    
+    <!-- Vertikal meny som endast är synlig på xl (x < 1140px ) -->
+   <nav id="vertical-menu" class="navbar navbar-expand-lg d-none d-xl-block"> 
+    <ul class="navbar-nav">
+        <li class="nav-item active ml-2 nav-active"><i class="fa fa-home fa-2x ml-1 mt-2"></i><a href="index.html">Hem</a></li>
+        <li class="nav-item dropdown dropdown-toggle mr-0" id="dropdown"><i class="fas fa-spa fa-2x ml-1 mt-2" ></i><a class="mr-0" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Vilda blommor</a>
+            <div class="dropdown-menu p-0 ml-2 mt-1" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="html/Akleja.html">Akleja</a>
+                <a class="dropdown-item" href="html/Cikoria.html">Cikoria</a>
+                <a class="dropdown-item" href="html/Klätt.html">Klätt</a>
+                <a class="dropdown-item" href="html/Nyponros.html">Nyponros</a>
+                <a class="dropdown-item" href="html/Rödklöver.html">Rödklöver</a>
+                <a class="dropdown-item" href="html/Silvermarton.html">Silvermarton</a>
+            </div>
+        </li>
+        <li class="nav-item ml-2"><i class="fa fa-user-edit fa-2x ml-1 mt-2"></i><a href="html/Omoss.html">Om oss</a></li>
+        <li class="nav-item mt-1"><i class="fa fa-handshake fa-2x ml-1 mt-2"></i><a href="html/Kontakt.html">Kontakt</a></li>    
+    </ul>
+    </nav>
+
+     <!-- Sökfunktion -->
+    <div class="input-group md-form form-sm form-2 pb-1 px-1">
+        <input class="form-control lime-border shadow-none " type="text" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+        <span class="input-group-text lime lighten-2 " id="basic-text1" style="background-color: #cddc39; border-color: #cddc39;"><i class="fas fa-search text-grey" aria-hidden="true"></i></span> </div>
+    </div>
+
+</header>
+
+<main>
+     <!-- En knapp som ser till att den horisontella menyn är synlig/döljs, Knappen är synlig i alla lägen förutom xl -->
+    <div id="sidebar-button">
+        <button class="openbtn rounded-circle d-block d-xl-none">&#9776;</button>  
+    </div>
+
+     <!-- Horisontella menyn  -->
+    <ul id="mySidebar" class="sidebar list-group list-group-flush d-block d-xl-none">
+    <li class="mb-5"><a class="menu-header text-center" >Meny</a></li>
+    <li class="list-item list-active marginstyle"><i class="fa fa-home fa-2x ml-1 mt-2"></i><a href="index.html">Hem</a></li>
+    <li class="list-item" id="horizontalmenu-dropdown"><i class="fas fa-spa fa-2x ml-1 mt-2"></i><a>Vilda blommor</a><i style="font-size:1.2rem;" id="icon" class="fas fa-plus fa-ms mt-3 ml-3 float-right"></i>
+            <li class="dropdown-items" style="display:none"><a href="html/Akleja.html">Akleja</a></li>
+            <li class="dropdown-items" style="display:none"><a href="html/Cikoria.html">Cikoria</a></li>
+            <li class="dropdown-items" style="display:none"><a href="html/Klätt.html">Klätt</a></li>
+            <li class="dropdown-items" style="display:none"><a href="html/Nyponros.html">Nyponros</a></li>
+            <li class="dropdown-items" style="display:none"><a href="html/Rödklöver.html">Rödklöver</a>
+            <li class="dropdown-items" style="display:none"><a href="html/Silvermarton.html">Silvermarton</a>
+    </li>
+    <li class="list-item"><i class="fas fa-user-edit fa-2x ml-1 mt-2"></i><a href="html/Omoss.html">Om oss</a></li>
+    <li class="list-item"><i class="fas fa-handshake fa-2x ml-1 mt-2"></i><a href="html/Kontakt.html">Kontakt</a></li>  
+    <li id="list-item-last" class="list-item d-sm-none d-block mt-5"><i id="login-icon" class="fas fa-sign-in-alt float-left fa-2x ml-1 mr-2 mt-2"></i><a>Logga in</a></li>           
+    </ul>
+
+     <!-- Elementet Div med klassen overaly ser till att hela sidan får en opacity på 0.5 när den horisontella menyn visas. Syftet är att lägga fokus på menyn  -->
+     <!-- 12 biler på vildblommor. På lg (1140px < x) visas 3 bilder för varje rad, på sm (540px < x) visas 2 biler för varje rad och i xs (mobilskärm) visas en bild för varje rad. Grid system används i detta fall -->
+     <!-- Alla bilder på alla sidor har tagits från https://pixabay.com/sv/ som är gratisbilder -->
+     <div class="overlay">
+    <div class="mdb-lightbox no-margin">
+        <div class="row m-0 mt-1 ">
+            <figure class="col-xs-12 col-sm-6 col-lg-4 p-0 m-0 fadeIn "> 
+                <a href="html/Akleja.html">
+                <img alt="akleja-picture" src="media/Wildflowers/akleja.jpg" class="img-fluid rounded"><!-- img-fluidklass ser till att bilden får max-width: 100% och height: auto -->
+                </a>
+                <header class="figure-header">  
+                    <div class="figure-meta pt-2"><span><a href="html/Akleja.html">2019/07/24</a> </span> </div>
+                    <h2 class="figure-title"> <a href="html/Akleja.html"> Akleja </a> </h2>
+                </header>
+            </figure>
+            
+            <figure class="col-xs-12 col-sm-6 col-lg-4 p-0 m-0 fadeIn ">
+                <a href="html/Cikoria.html">
+                <img alt="cikoria-picture" src="media/Wildflowers/cikoria.jpg" class="img-fluid rounded">
+                </a>
+                <header class="figure-header">  
+                    <div class="figure-meta pt-2"><span><a href="html/Cikoria.html">2019/05/12</a> </span> </div>
+                    <h2 class="figure-title"> <a href="html/Cikoria.html"> Cikoria </a> </h2>
+                </header>
+              
+            </figure>
+
+            <figure class="col-xs-12 col-sm-6 col-lg-4 p-0 m-0 fadeIn">
+                <a href="html/Klätt.html">
+                <img alt="klett-picture" src="media/Wildflowers/klett.jpg" class="img-fluid rounded">
+                </a>
+                <header class="figure-header">  
+                    <div class="figure-meta pt-2"><span><a href="html/Klätt.html">2019/02/28</a> </span> </div>
+                    <h2 class="figure-title"> <a href="html/Klätt.html"> Klätt </a> </h2>
+                </header>
+            </figure>
+
+            <figure class="col-xs-12 col-sm-6 col-lg-4 p-0 m-0 fadeIn">
+                <a href="html/Nyponros.html">
+                <img alt="nyponros-picture" src="media/Wildflowers/nyponros.jpg" class="img-fluid rounded">
+                </a>
+                <header class="figure-header">  
+                    <div class="figure-meta pt-2"><span><a href="html/Nyponros.html">2019/01/13</a> </span> </div>
+                    <h2 class="figure-title"> <a href="html/Nyponros.html"> Nyponros</a> </h2>
+                </header>
+            </figure>
+            
+            <figure class="col-xs-12 col-sm-6 col-lg-4 p-0 m-0 fadeIn">
+                <a href="html/Rödklöver.html">
+                <img alt="rödklöver-picture" src="media/Wildflowers/rödklöver.jpg" class="img-fluid rounded">
+                </a>
+                <header class="figure-header">  
+                    <div class="figure-meta pt-2"><span><a href="html/Rödklöver.html">2019/01/01</a> </span> </div>
+                    <h2 class="figure-title"> <a href="html/Rödklöver.html"> Rödklöver </a> </h2>
+                </header>
+            </figure>
+
+            <figure class="col-xs-12 col-sm-6 col-lg-4 p-0 m-0 fadeIn">
+                <a href="html/Silvermarton.html">
+                <img alt="silvermarton-picture" src="media/Wildflowers/silvermarton.jpg" class="img-fluid rounded">
+                </a>
+                <header class="figure-header">  
+                    <div class="figure-meta pt-2"><span><a href="html/Silvermarton.html">2018/12/10</a> </span> </div>
+                    <h2 class="figure-title"> <a href="html/Silvermarton.html"> Silvermarton </a> </h2>
+                </header>
+            </figure>
+
+            <figure id="figure7" class="col-xs-12 col-sm-6 col-lg-4 p-0 m-0">
+                <img alt="såpnejlika-picture" src="media/Wildflowers/såpnejlika.jpg" class="img-fluid rounded">
+                <header class="figure-header">  
+                    <div class="figure-meta pt-2"><span><a href="#">2018/10/05</a> </span> </div>
+                    <h2 class="figure-title"> <a href="#"> Såpnejlika </a> </h2>
+                </header>
+            </figure>
+            
+            <figure  class="col-xs-12 col-sm-6 col-lg-4 p-0 m-0">
+                <img alt="blåeld-picture" src="media/Wildflowers/blåeld.jpg" class="img-fluid rounded">
+                <header class="figure-header">  
+                    <div class="figure-meta pt-2"><span><a href="#">2018/09/08</a> </span> </div>
+                    <h2 class="figure-title"> <a href="#"> Blåeld </a> </h2>
+                </header>
+            </figure>
+
+            <figure id="figure9" class="col-xs-12 col-sm-6 col-lg-4 p-0 m-0 fadeIn">
+                <img alt="tusensköna-picture" src="media/Wildflowers/tusensköna.jpg" class="img-fluid rounded ">
+                <header class="figure-header">  
+                    <div class="figure-meta pt-2"><span><a href="#">2018/05/15</a> </span> </div>
+                    <h2 class="figure-title"> <a href="#"> Tusensköna </a> </h2>
+                </header>
+            </figure>
+
+            <figure  id="figure10" class="col-xs-12 col-sm-6 col-lg-4 p-0 m-0">
+                <img alt="fackelblomster-picture" src="media/Wildflowers/fackelblomster.jpg" class="img-fluid rounded">
+                <header class="figure-header">  
+                    <div class="figure-meta pt-2"><span><a href="#">2018/03/27</a> </span> </div>
+                    <h2 class="figure-title"> <a href="#"> Fackelblomster </a> </h2>
+                </header>
+            </figure>
+
+            <figure id="figure11" class="col-xs-12 col-sm-6 col-lg-4 p-0 m-0 ">
+                <img alt="smörblomma-picture" src="media/Wildflowers/smörblomma.jpg" class="img-fluid rounded">
+                <header class="figure-header">  
+                    <div class="figure-meta pt-2"><span><a href="#">2018/03/10</a> </span> </div>
+                    <h2 class="figure-title"> <a href="#"> Smörblomma </a> </h2>
+                </header>
+            </figure>
+
+            <figure class="col-xs-12 col-sm-6 col-lg-4 p-0 m-0">
+                <img alt="väddklint-picture" src="media/Wildflowers/väddklint.jpg" class="img-fluid rounded">
+                <header class="figure-header">  
+                    <div class="figure-meta pt-2"><span><a href="#">2018/02/10</a> </span> </div>
+                    <h2 class="figure-title"> <a href="#"> Väddklint</a> </h2>
+                </header>
+            </figure>    
+        </div>
+    </div>
+    </div>
+    
+</main>
+    <!-- Script länkar -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="javascript/index.js"></script>
+    <script src="js/index.js"></script>
+    
+</body>
+</html>

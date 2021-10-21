@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <title>Flowerz</title>
+</head>
+
+<body>
+<header>
+    <h1 id="Header-title" class="p-1 pt-3 text-center">Flowerz</h1> 
+
+    <i id="fa-login-icon" class="fas fa-sign-in-alt float-right fa-2x  mr-2 mt-2 p-1 d-none"></i>
+    
+   <nav id="vertical-menu" class="navbar navbar-expand-lg d-none d-xl-block"> 
+    <ul class="navbar-nav">
+        <li class="nav-item ml-2"><i class="fa fa-home fa-2x ml-1 mt-2"></i><a href="../index.html">Hem</a></li>
+        <li class="nav-item dropdown dropdown-toggle mr-0 nav-active" id="dropdown"><i class="fas fa-spa fa-2x ml-1 mt-2" ></i><a class="mr-0" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Vilda blommor</a>
+            <div class="dropdown-menu p-0 ml-2 mt-1" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="Akleja.html">Akleja</a>
+                <a class="dropdown-item" href="Cikoria.html">Cikoria</a>
+                <a class="dropdown-item nav-item-active" href="Klätt.html">Klätt</a>
+                <a class="dropdown-item" href="Nyponros.html">Nyponros</a>
+                <a class="dropdown-item" href="Rödklöver.html">Rödklöver</a>
+                <a class="dropdown-item" href="Silvermarton.html">Silvermarton</a>
+            </div>
+        </li>
+        <li class="nav-item ml-2"><i class="fa fa-user-edit fa-2x ml-1 mt-2"></i><a href="Omoss.html">Om oss</a></li>
+        <li class="nav-item mt-1"><i class="fa fa-handshake fa-2x ml-1 mt-2"></i><a href="Kontakt.html">Kontakt</a></li>    
+    </ul>
+    </nav>
+
+    <div class="input-group md-form form-sm form-2 pb-1 px-1">
+        <input class="form-control lime-border shadow-none " type="text" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+        <span class="input-group-text lime lighten-2 " id="basic-text1" style="background-color: #cddc39; border-color: #cddc39;"><i class="fas fa-search text-grey" aria-hidden="true"></i></span> </div>
+    </div>
+
+</header>
+
+<main>
+    <div id="sidebar-button">
+        <button class="openbtn rounded-circle d-block d-xl-none">&#9776;</button>  
+    </div>
+
+    <ul id="mySidebar" class="sidebar list-group list-group-flush d-block d-xl-none">
+    <li class="mb-5"><a class="menu-header text-center" >Meny</a></li>
+    <li class="list-item marginstyle"><i class="fa fa-home fa-2x ml-1 mt-2"></i><a href="../index.html">Hem</a></li>
+    <li class="list-item list-active" id="horizontalmenu-dropdown"><i class="fas fa-spa fa-2x ml-1 mt-2"></i><a>Vilda blommor</a><i style="font-size:1.2rem;" id="icon" class="fas fa-plus fa-ms mt-3 ml-3 float-right"></i>
+            <li class="dropdown-items" style="display:none"><a href="Akleja.html">Akleja</a></li>
+            <li class="dropdown-items" style="display:none"><a href="Cikoria.html">Cikoria</a></li>
+            <li class="dropdown-items list-active" style="display:none"><a href="Klätt.html">Klätt</a></li>
+            <li class="dropdown-items" style="display:none"><a href="Nyponros.html">Nyponros</a></li>
+            <li class="dropdown-items" style="display:none"><a href="Rödklöver.html">Rödklöver</a>
+            <li class="dropdown-items" style="display:none"><a href="Silvermarton.html">Silvermarton</a>
+    </li>
+    <li class="list-item"><i class="fas fa-user-edit fa-2x ml-1 mt-2"></i><a href="Omoss.html">Om oss</a></li>
+    <li class="list-item"><i class="fas fa-handshake fa-2x ml-1 mt-2"></i><a href="Kontakt.html">Kontakt</a></li>  
+    <li id="list-item-last" class="list-item d-sm-none d-block mt-5"><i id="login-icon" class="fas fa-sign-in-alt float-left fa-2x ml-1 mr-2 mt-2"></i><a>Logga in</a></li>           
+    </ul>
+
+    <div class="overlay container-fluid">
+        <div class="row">
+
+                <div class="col-xs-12 col-sm-6 col-lg-5 p-0 mt-2 pl-1 pr-1 order-1">
+                    <a href="Klätt.html">
+                    <img alt="Klätt-picture" src="../media/Wildflowers/klett.jpg" class="img-fluid rounded">
+                    </a>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-lg-12 order-3 links mt-3">
+                    <a href="Cikoria.html">&#60;&#45; Föregående blomma</a>
+                    <a href="Nyponros.html" class="float-right">Nästa blomma &#45;&#62;</a>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-lg-12 mt-4 order-4">
+                        <div class="comment-wrapper mb-2 pb-2">
+                            <div class="panel panel-info">
+                                <div class="panel-heading pl-2">
+                                    Kommentarer
+                                </div>
+                                <div class="panel-body m-2">
+                                    <textarea class="form-control" placeholder="skriv en kommentar..." rows="4"></textarea>
+                                    <br>
+                                    <button type="button" class="btn btn-success buttonforpost pull-right float-right">Post</button>
+                                        <div class="clearfix"></div>
+                                        <hr>
+                                        <ul class="media-list">
+                                            <li class="media mb-4">
+                                                <a href="#" class="pull-left mr-3">
+                                                    <img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-circle">
+                                                </a>
+                                                <div class="media-body">
+                                                    <span class="Alex">
+                                                        <small class="text-muted">För 6 timmar sedan</small>
+                                                    </span>
+                                                    <strong class="text-success">@Kent</strong>
+                                                    <p>
+                                                        Beautiful! 
+                                                         <a href="#">#Klätt </a>.
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="media">
+                                                <a href="#" class="pull-left mr-3">
+                                                    <img src="https://bootdey.com/img/Content/user_2.jpg" alt="" class="img-circle">
+                                                </a>
+                                                <div class="media-body">
+                                                    <span class="text-muted pull-right">
+                                                        <small class="text-muted">För två dagar sedan</small>
+                                                    </span>
+                                                    <strong class="text-success">@Lars</strong>
+                                                    <p>
+                                                        Blir nästan tårögd! Så fin!
+                                                        <a href="#">#Klätt</a>
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+    
+                <div class="col-xs-12 col-sm-6 col-lg-7 order-2">
+                    <div class="row mt-2">
+                        <div class="col-xs-12 col-sm-12 col-lg-12">
+                            <h2 class="h2-header">Klätt</h2>
+                            <p class="p-text">Klätt eller åkerklätt (Agrostemma githago) är en art i familjen nejlikväxter. </p>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-lg-12">
+                            <h2 class="h2-header">Utseende</h2>
+                            <p class="p-text">Åkerklätt är en ettårig ört med en växthöjd som varierar mellan 10 och 125 cm, vanligen cirka 50 cm. Kromosomtal 2n=48. Den är styvhårig och stjälkarna är upprätta och ogrenade eller sparsamt greniga upptill. Bladen är 2-13 centimeter, smalt lansettlika och mer eller mindre grågröna. Den blommar i juni-augusti i Sverige med femtaliga toppställda 2–5 cm vida blommor. Kronbladen är rödvioletta med mörkare strimmor och vitaktig bas, de är hela eller grunt urnupna i spetsen, bikrona saknas.
+                                Fodret är sambladigt med stjärnlikt utbredda flikar som är längre än kronbladen. Flikarnas mittnerv är svagt upphöjd, kantnerverna är otydliga, fodertuben är tätt hårig av korta hår, dessutom med många långa hår.
+                            </p>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-lg-12">
+                            <h2 class="h2-header">Förekomst</h2>
+                            <p class="p-text">Åkerklätt förekommer i Eurasien och norra Afrika och den finns även i Sverige. Den var förr vanlig på åkrar som ogräs tills man på 1930-talet började få fram effektiva metoder att rensa utsädet från ogräsfrö, då den började minska snabbt så att den har blivit mycket sällsynt och finns bara kvar som relikt i enstaka exemplar på ett par ställen på Öland. Den är rödlistad. Orsaken är att någon fröbank kan inte byggas upp i marken, då klätten saknar groningsvila och fröna måste följa med utsädet och sås ut varje år.
+                                Växten är lättodlad och relativt vanlig som trädgårdsväxt och trivs i allehanda jordtyper, särskilt näringsrika sådana som höstrågåkrar, åkrar i träda, slänter och ruderatmark.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+ 
+</main>
+
+    <script src="../javascript/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
